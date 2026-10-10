@@ -1,0 +1,32 @@
+
+/* Light mode - default */
+body {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.recipe-card {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.recipe-card h3,
+.recipe-card p {
+  color: #222222;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.dark .recipe-card {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark .recipe-card h3,
+body.dark .recipe-card p {
+  color: #ffffff;
+}

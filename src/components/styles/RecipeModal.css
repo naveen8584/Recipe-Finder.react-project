@@ -1,0 +1,132 @@
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  overflow: hidden;
+  padding: 25px;
+  border-radius: 15px;
+  background: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Keep the image fixed while details scroll */
+.modal-image {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: fit-content;
+}
+
+.modal-image img {
+  display: block;
+  width: 100%;
+  max-height: calc(90vh - 100px);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Scroll recipe information independently */
+.modal-details {
+  height: 100%;
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0 12px 25px 0;
+  box-sizing: border-box;
+}
+
+.modal-details h2 {
+  margin-top: 0;
+  padding-right: 35px;
+}
+
+.ingredients-section,
+.instructions {
+  margin-top: 20px;
+}
+
+.ingredients-section li,
+.instructions li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #e62117;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    height: 95vh;
+    padding: 15px;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    position: static;
+    width: 100%;
+  }
+
+  .modal-image img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .modal-details {
+    height: auto;
+    overflow-y: visible;
+  }
+}
+

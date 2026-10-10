@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.8rem;
+    background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
+    color: #fff;
+}
+
+.dark-btn{
+    background: #fff;
+    color: #e52e71;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-weight:600;
+}
